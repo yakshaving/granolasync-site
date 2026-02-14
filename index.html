@@ -6,20 +6,28 @@
   <title>GranolaSync — Sync Granola meetings to Planka & Linear</title>
   <meta name="description" content="A macOS menubar app that syncs your Granola meeting notes and action items to Planka boards and Linear issues.">
   <style>
+    @font-face {
+      font-family: 'Quadrant Notepad';
+      src: url('QuadrantNotepad.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0e0e10;
-      --surface: #1a1a1f;
-      --border: #2a2a30;
-      --text: #e4e4e7;
-      --text-muted: #8a8a95;
-      --accent: #6366f1;
-      --accent-hover: #818cf8;
+      --bg: #b7c069;
+      --surface: rgba(0, 0, 0, 0.06);
+      --border: rgba(0, 0, 0, 0.1);
+      --text: #1a1a1a;
+      --text-muted: #3d3d2e;
+      --accent: #2d2d1a;
+      --accent-hover: #1a1a0e;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: 'Quadrant Notepad', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -44,7 +52,7 @@
       width: 140px;
       height: 140px;
       border-radius: 28px;
-      box-shadow: 0 8px 40px rgba(99, 102, 241, 0.2);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
       margin-bottom: 2rem;
     }
 
@@ -67,7 +75,7 @@
       align-items: center;
       gap: 0.5rem;
       background: var(--accent);
-      color: #fff;
+      color: #d4d99a;
       font-size: 1.1rem;
       font-weight: 600;
       padding: 0.85rem 2rem;
@@ -76,7 +84,7 @@
     }
     .download-btn:hover {
       background: var(--accent-hover);
-      color: #fff;
+      color: #d4d99a;
       transform: translateY(-1px);
     }
     .download-btn svg { width: 20px; height: 20px; }
@@ -168,7 +176,7 @@
     }
 
     .steps code {
-      background: var(--surface);
+      background: rgba(0, 0, 0, 0.08);
       padding: 0.15em 0.45em;
       border-radius: 5px;
       font-size: 0.9em;
@@ -176,7 +184,7 @@
 
     /* Footer */
     footer {
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
       text-align: center;
       padding: 2rem 1.5rem;
       font-size: 0.85rem;
